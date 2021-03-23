@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import './ArrowPractice.js';
 import MyComponent from './MyComponent';
 
 const App = () => {
-  return <MyComponent>밀크티</MyComponent>;
-};
+  return <MyComponent name="milktea">밀크티</MyComponent>;
+}
 export default App; 
 
 /* function App() {
