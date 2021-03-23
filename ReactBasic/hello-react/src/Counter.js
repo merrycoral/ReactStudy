@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-	state ={
-		number : 0
+	constructor(props) {
+		super(props);
+		this.state = {
+			number: 0
+		};
 	}
-
-	handleIncrease = () => {
-		this.setState({
-			number : this.state.number + 1
-		});
-	}
-	handleDecrease = () => {
-		this.setState({
-			number: this.state.number -1
-		});
-	}
-
 	render() {
+		const { number } = this.state; //state 조회
 		return (
 			<div>
-				<h1>카운터</h1>
-				<div>값: {this.state.number}</div>
-				<button onClick={this.handleIncrease}>+</button>
-				<button onClick={this.handleDecrease}>-</button>
+				<h1>{ number }</h1>
+				<button onClick={() => {
+					this.setState({ number: number + 1});
+				  }}
+				>
+				  +1
+				</button>
 			</div>
 		);
 	}
