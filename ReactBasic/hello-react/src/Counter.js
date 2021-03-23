@@ -18,14 +18,15 @@ class Counter extends Component {
 			<div>
 				<h1>{ number }</h1>
 				<button onClick={() => {
-					this.setState(prevState => {
-					  return {
-						  number:prevState.number + 1
-					  };
-					});
-					this.setState(prevState => ({
-						number: prevState.number +1
-					}));
+					this.setState(
+						{
+							number: number + 1
+						},
+						() => {
+							console.log('setState 호출');
+							console.log(this.state);
+						}
+					)					
 				  }}
 				>
 				  +1
