@@ -7,6 +7,11 @@ class Counter extends Component {
 			number: 0
 		};
 	}
+/* 	state = {
+			number: 0,
+			favorite: "milktea",
+			where: "blog"
+	}; */
 	render() {
 		const { number } = this.state; //state 조회
 		return (
