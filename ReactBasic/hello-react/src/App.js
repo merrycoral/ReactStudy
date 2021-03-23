@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
 import MyComponent from './MyComponent';
+import MyClassComp from './MyClassComp';
 
 const App = () => {
-  return <MyComponent name="milktea">밀크티</MyComponent>;
+  //return <MyComponent name="milktea">밀크티</MyComponent>;
+  return <MyClassComp name="milktea" favoriteNumber={10}>child</MyClassComp>;
 }
 export default App; 
 
