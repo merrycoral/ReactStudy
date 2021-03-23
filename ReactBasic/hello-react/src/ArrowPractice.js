@@ -1,5 +1,3 @@
-import React from 'react';
-
 function BlackDog() {
   this.name = '흰둥이';
   return {
