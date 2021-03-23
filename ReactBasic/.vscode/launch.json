@@ -1,0 +1,30 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch App.js",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9240,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch ArrowPractice.html",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9260,
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Chrome 127.0.0.1",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9244,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://127.0.0.1:54855/p/ReactBasic/hello-react/src/ArrowPractice.html?_cmAuth\u003ddcwgpnjreh"
+    }
+  ]
+}
