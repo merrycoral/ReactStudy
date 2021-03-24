@@ -4,11 +4,13 @@ import MyComponent from './MyComponent';
 import MyClassComp from './MyClassComp';
 import Counter from './Counter';
 import Say from './Say';
+import EventPractice from './EventPractice';
 
 const App = () => {
   //return <MyComponent name="milktea">밀크티</MyComponent>;
   //return <MyClassComp name="milktea" favoriteNumber={10}>child</MyClassComp>;
-  return <Say/>
+  //return <Say/>
+  return <EventPractice/>
 }
 export default App; 
 
