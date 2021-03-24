@@ -3,11 +3,12 @@ import './App.css';
 import MyComponent from './MyComponent';
 import MyClassComp from './MyClassComp';
 import Counter from './Counter';
+import Say from './Say';
 
 const App = () => {
   //return <MyComponent name="milktea">밀크티</MyComponent>;
   //return <MyClassComp name="milktea" favoriteNumber={10}>child</MyClassComp>;
-  return <Counter></Counter>
+  return <Say/>
 }
 export default App; 
 
