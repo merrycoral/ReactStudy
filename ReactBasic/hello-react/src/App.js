@@ -13,8 +13,12 @@ const App = () => {
   //return <MyClassComp name="milktea" favoriteNumber={10}>child</MyClassComp>;
   //return <Say/>
  // return <EventPractice/>
-  //return <EventPracticeFunc/>
-  return <EventPracticeFunc2/>
+  return (
+    <div>
+      <EventPracticeFunc/>
+      <EventPracticeFunc2/>
+    </div>
+    )
 }
 export default App; 
 
