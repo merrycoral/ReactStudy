@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import ScrollBox from './ScrollBox';
 import IterationSample from './IterationSample';
+import LoginCheck from './LoginCheck';
 
 class RefApp extends Component {
 	render() { 
 		return(
-			<IterationSample/>
+			<LoginCheck/>
+			//<IterationSample/>
+
 /* 			<div>
 				<ScrollBox ref={(ref) => this.scrollBox=ref}/>
 				<button onClick={() => this.scrollBox.scrollToBottom()}>
