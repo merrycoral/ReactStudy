@@ -10,7 +10,6 @@ const LoginCheck = () => {
 	
 	const onEnterId = e => setInputId(e.target.value);
 	const onEnterPw = e => setInputPw(e.target.value);
-	//const onValidated = () => setValidated(true);
 	const onBlurId = () => {setMessage("아이디를 확인하세요"); setValidated(false); }
 	const onBlurId2 = () => {setMessage("ID, PW가 입력되었습니다. DB에서 회원정보를 조회하세요.");
 		setValidated(true)}; 

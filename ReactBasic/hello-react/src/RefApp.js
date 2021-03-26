@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import ScrollBox from './ScrollBox';
 import IterationSample from './IterationSample';
 import LoginCheck from './LoginCheck';
+import Calculator from './Calculator';
 
 class RefApp extends Component {
 	render() { 
 		return(
-			<LoginCheck/>
+			<div>
+				<LoginCheck/>
+				<Calculator/>
+			</div>
 			//<IterationSample/>
 
 /* 			<div>

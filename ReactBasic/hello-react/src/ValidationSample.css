@@ -1,7 +1,9 @@
 .success {
 	background-color: lightgreen;
+	color: white;
 }
 
 .failure {
 	background-color: lightcoral;
+	color: white;
 }
