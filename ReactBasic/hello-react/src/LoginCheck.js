@@ -6,13 +6,17 @@ const LoginCheck = () => {
 	const [inputId, setInputId] = useState('');
 	const [inputPw, setInputPw] = useState('');
 	const [message, setMessage] = useState('');
+	const [validated, setValidated] = useState(false);
 	
 	const onEnterId = e => setInputId(e.target.value);
 	const onEnterPw = e => setInputPw(e.target.value);
-	const onBlurId = () => setMessage("아이디를 확인하세요"); 
-	const onBlurId2 = () => setMessage("ID, PW가 입력되었습니다. DB에서 회원정보를 조회하세요."); 
-	const onBlurPw = () => setMessage("비밀번호를 확인하세요"); 
-	const noIdPw = () => setMessage("아이디, 비밀번호를 확인하세요"); 
+	//const onValidated = () => setValidated(true);
+	const onBlurId = () => {setMessage("아이디를 확인하세요"); setValidated(false); }
+	const onBlurId2 = () => {setMessage("ID, PW가 입력되었습니다. DB에서 회원정보를 조회하세요.");
+		setValidated(true)}; 
+	const onBlurPw = () => {setMessage("비밀번호를 확인하세요"); setValidated(false);} 
+	const noIdPw = () => {setMessage("아이디, 비밀번호를 확인하세요"); setValidated(false);}
+	
 
 		return (
 			<div>
@@ -30,15 +34,18 @@ const LoginCheck = () => {
 					<input
 						type="password"
 						placeholder="pw"
-						//value={inputPw}
 						onChange={onEnterPw}
 						/>
 					<br/>
 					<button onClick={
-						inputId !=='' ? (inputPw !=='' ? onBlurId2 : onBlurPw) : (inputPw !=='' ? onBlurId : noIdPw)} >
+						inputId !=='' ? (inputPw !=='' ? onBlurId2 : onBlurPw) : (inputPw !=='' ? onBlurId : noIdPw)}
+						>
 						로그인</button>
 					<br/>
-					{message}
+					<div style={{width: '30%'}} className={validated ? 'success' : 'failure'}
+					>
+						{message}
+					</div>
 					<br/>
 					입력 받은 아이디: {inputId}<br/>
 					입력 받은 PW: {inputPw}

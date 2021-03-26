@@ -4,7 +4,7 @@ import './ValidationSample.css';
 class ValidationSample extends Component {
 	state = {
 		password: '',
-		clicked: false,
+		
 		validated: false
 	}
 
