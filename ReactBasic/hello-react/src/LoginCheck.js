@@ -7,30 +7,43 @@ const LoginCheck = () => {
 	const [inputPw, setInputPw] = useState('');
 	const [message, setMessage] = useState('');
 	
-	//const onClickLogIn = function() => 
-	const onEnterId = e => setInputId(e); 
+	const onEnterId = e => setInputId(e.target.value);
+	const onEnterPw = e => setInputPw(e.target.value);
 	const onBlurId = () => setMessage("아이디를 확인하세요"); 
+	const onBlurId2 = () => setMessage("ID, PW가 입력되었습니다. DB에서 회원정보를 조회하세요."); 
 	const onBlurPw = () => setMessage("비밀번호를 확인하세요"); 
+	const noIdPw = () => setMessage("아이디, 비밀번호를 확인하세요"); 
 
 		return (
 			<div>
-				<input
-					placeholder="id"
-					onChange={onEnterId}
-					onBlur={onBlurId}
-				/>
-				<br/>
-				<input
-					placeholder="pw"
-					//value={inputPw}
-					onBlur={onBlurPw}
+				<div style={
+						{
+							border: 'solid 1px'
+						}
+					}
+				>
+					<input
+						placeholder="id"
+						onChange={onEnterId}
 					/>
-				<br/>
-				<button >로그인</button>
-				<br/>
-				{message}
-				{inputId}
+					<br/>
+					<input
+						type="password"
+						placeholder="pw"
+						//value={inputPw}
+						onChange={onEnterPw}
+						/>
+					<br/>
+					<button onClick={
+						inputId !=='' ? (inputPw !=='' ? onBlurId2 : onBlurPw) : (inputPw !=='' ? onBlurId : noIdPw)} >
+						로그인</button>
+					<br/>
+					{message}
+					<br/>
+					입력 받은 아이디: {inputId}<br/>
+					입력 받은 PW: {inputPw}
 
+				</div>
 			</div>
 		);
 }
