@@ -18,8 +18,8 @@ const Calculator = () => {
 			<h1> 간단한 계산기</h1>
 			<h5> 밀크티 - https://blog.naver.com/nagong_ham</h5>
 			<h5> 나누기는 몫과 나머지를 찾아줍니당 ^*^ </h5>
-			첫번째 수 : <input onChange={onEnterOne} ></input>
-			두번째 수 : <input onChange={onEnterTwo} ></input>
+			첫번째 수 : <input onChange={onEnterOne} placeholder={one}></input>
+			두번째 수 : <input onChange={onEnterTwo} placeholder={two}></input>
 			<br/>
 			연산자 : 
 			<label><input type="radio" name="operate" value="+" onClick={() => {setCalc('+'); setClick(false);}}/> +</label>
