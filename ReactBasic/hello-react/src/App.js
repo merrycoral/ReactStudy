@@ -9,6 +9,7 @@ import EventPracticeFunc from './EventPracticeFunc';
 import EventPracticeFunc2 from './EventPracticeFunc2'; */
 import React, { Component } from 'react';
 import LifeCycleSample from './LifeCycleSample';
+import ErrorBoundary from './ErrorBoundary';
 
 
 //const App = () => {
@@ -35,10 +36,19 @@ import LifeCycleSample from './LifeCycleSample';
     }
   
   render() {
+    console.log('render');
+
+    const style = {
+      color: this.props.color
+    };
+
     return (
       <div>
+        {this.props.missing.value}
         <button onClick={this.handleClick}>랜덤 색</button>
-        <LifeCycleSample color={this.state.color}/>
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color}/>
+        </ErrorBoundary>
       </div>
       );
   }
