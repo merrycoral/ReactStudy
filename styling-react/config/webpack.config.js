@@ -510,9 +510,14 @@ module.exports = function (webpackEnv) {
                     : isEnvDevelopment,
                 }).concat({
                   loader: require.resolve('sass-loader'),
-                  options: {
-                    includePaths: [paths.appSrc + '/styles'],
-                    sourceMap: isEnvProduction && shouldUseSourceMap,}
+                    options: {
+                    sassOptions: {
+                      includePaths: [paths.appSrc + '/styles'],
+                      sourceMap: isEnvProduction && shouldUseSourceMap
+                    },
+                    additionalData: `@import 'utils';`
+                    //이 부분 문법이 리액트 버전 별로 자주 바뀌니 최신 버전 검색 요망
+                  }
                 }),
                 sideEffects: true,
               },
