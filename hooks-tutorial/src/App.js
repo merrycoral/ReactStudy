@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Counter from './Counter';
-import Info from './Info';
+//import Info from './Info';
+import Info2 from './Info2';
 import Average from './Average';
 import MyComponent from './MyComponent';
 import RefSample from './MyComponent2';
@@ -9,9 +10,10 @@ const App = () => {
  // const [visible, setVisible] = useState(false);
   return (
     <div>
-      <MyComponent/>
+      <Info2/>
+      {/* <MyComponent/>
       <RefSample/>
-      {/* <hr/>
+      <hr/>
       <Average/>
       <hr/>
       <Counter/>
