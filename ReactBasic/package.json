@@ -12,5 +12,7 @@
     "nodeclipse"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
 }
