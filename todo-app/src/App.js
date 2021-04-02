@@ -52,7 +52,7 @@ const App = () => {
     //setTodos(todos.concat(todo));
     setTodos(todos => todos.concat(todo));
     nextId.current += 1; //nextId 1씩 더하기
-    },
+    }, []
     //[todos],
   );
 
@@ -60,7 +60,7 @@ const App = () => {
     id => {
       //setTodos(todos.filter(todo => todo.id !==id));
       setTodos(todos => todos.filter(todo => todo.id !==id));
-    },
+    }, []
     //[todos],
   );
 
@@ -74,8 +74,8 @@ const App = () => {
           todo.id === id ? { ...todo, checked: !todo.checked } : todo,
         ),
       );
-    },
-    [todos],
+    }, []
+    //[todos],
   );
 
   return (
