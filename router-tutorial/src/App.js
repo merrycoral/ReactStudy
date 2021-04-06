@@ -18,7 +18,7 @@ const App = () => {
       아니면 패스가 다 달라서 이게 최선일까? */}
       <hr/>
       <Route path="/" component={Home} ﻿exact={true} />
-      <Route path="/about" component={About} />
+      ﻿<Route path={['/about', '/info']} component={About} />
     </div>
   );
 }
