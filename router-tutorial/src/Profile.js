@@ -1,0 +1,30 @@
+import React from 'react';
+
+const data = {
+  milktea: {
+    name: '밀크티',
+    description: '밀크티를 좋아함'
+  },
+  latteCookie: {
+    name: '라떼맛 쿠키',
+    description: '라떼 선생님'
+  }
+};
+
+const Profile = ({ match }) => {
+  const { username } = match.params;
+  const profile = data[username];
+  if (!profile) {
+    return <div>존재하지 않는 사용자입니다.</div>
+  }
+  return (
+    <div>
+      <h3>
+        {username}({profile.name})
+      </h3>
+      <p>{profile.description}</p>
+    </div>
+  )
+}
+
+export default Profile;
